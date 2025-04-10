@@ -32,7 +32,7 @@ export default function Home() {
     const imageBase64 = canvas.toDataURL('image/jpeg');
 
     try {
-      const response = await fetch('https://your-flask-api-url/predict', {
+      const response = await fetch('https://glucose-monitor-api.onrender.com/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ image: imageBase64 })
